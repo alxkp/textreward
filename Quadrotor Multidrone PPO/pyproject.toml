@@ -1,0 +1,37 @@
+[project]
+name = "650"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Alexander Kyimpopkin", email = "39439486+alxkp@users.noreply.github.com" }
+]
+dependencies = [
+    "gymnasium[mujoco]>=0.29.1",
+    "torch>=2.3.0",
+    "torchvision>=0.18.0",
+    "numpy>=1.26.4",
+    "matplotlib>=3.8.4",
+    "stable-baselines3[extra]>=2.3.2",
+    "tqdm>=4.66.4",
+    "plotly>=5.22.0",
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[project.scripts]
+hello = "650:hello"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = [
+    "pdbp>=1.5.0",
+    "black>=24.4.2",
+    "pyright>=1.1.362",
+    "ruff_lsp>=0.0.53",
+    "ipython>=8.24.0",
+]
+
+[[tool.rye.sources]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
